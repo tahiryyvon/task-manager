@@ -1,0 +1,17 @@
+.app-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Take full viewport height */
+}
+
+app-navbar {
+  width: 200px; /* Adjust as needed for your sidebar width */
+  flex-shrink: 0; /* Prevent shrinking */
+  height: 100%; /* Explicitly set height to 100% of parent */
+}
+
+.main-content {
+  flex-grow: 1; /* Take remaining space */
+  padding: 1rem; /* Add some padding to the main content */
+  overflow-y: auto; /* Enable scrolling for main content if it overflows */
+}

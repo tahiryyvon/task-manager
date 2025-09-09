@@ -1,0 +1,13 @@
+.task-list-container {
+  padding: 2rem;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-mr-2 {
+  margin-right: 0.5rem;
+}

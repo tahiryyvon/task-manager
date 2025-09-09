@@ -1,0 +1,15 @@
+<div class="login-container">
+  <p-card header="Login" [style]="{width: '360px'}">
+    <div class="field">
+      <label for="username">Username</label>
+      <input type="text" pInputText [(ngModel)]="username" id="username" class="w-full">
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <p-password [(ngModel)]="password" [feedback]="false" inputId="password" [style]="{'width': '100%'}"></p-password>
+    </div>
+    <ng-template pTemplate="footer">
+      <p-button label="Login" icon="pi pi-sign-in" (click)="login()" styleClass="w-full"></p-button>
+    </ng-template>
+  </p-card>
+</div>

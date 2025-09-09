@@ -1,0 +1,15 @@
+<p-dialog header="Task Details" [(visible)]="display" [modal]="true" [style]="{width: '50vw'}" (onHide)="close()">
+  <div class="field">
+    <label for="title">Title</label>
+    <input id="title" type="text" pInputText [(ngModel)]="task.title" class="w-full" />
+  </div>
+  <div class="field">
+    <label for="description">Description</label>
+    <textarea id="description" pInputTextarea [(ngModel)]="task.description" rows="5" class="w-full"></textarea>
+  </div>
+
+  <ng-template pTemplate="footer">
+    <p-button icon="pi pi-times" (click)="close()" label="Cancel" styleClass="p-button-text"></p-button>
+    <p-button icon="pi pi-check" (click)="save()" label="Save"></p-button>
+  </ng-template>
+</p-dialog>

@@ -1,0 +1,31 @@
+<div class="task-list-container">
+  <app-task-form [(display)]="displayTaskForm"></app-task-form>
+
+  <p-table [value]="tasks" [columns]="cols" >
+    <ng-template pTemplate="caption">
+      <div class="table-header">
+        <h2>Task List</h2>
+        <p-button icon="pi pi-plus" label="Add Task" (click)="showTaskForm()"></p-button>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns">
+          {{col.header}}
+        </th>
+        <th>Actions</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-task let-columns="columns">
+      <tr>
+        <td *ngFor="let col of columns">
+          {{task[col.field]}}
+        </td>
+        <td>
+          <p-button icon="pi pi-pencil" styleClass="p-button-rounded p-button-success p-mr-2"></p-button>
+          <p-button icon="pi pi-trash" styleClass="p-button-rounded p-button-warning"></p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

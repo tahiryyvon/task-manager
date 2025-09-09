@@ -1,0 +1,15 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 56px); /* Adjust 56px based on navbar height */
+  background-color: #f4f4f4;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+.w-full {
+    width: 100%;
+}
