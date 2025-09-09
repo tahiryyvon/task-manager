@@ -4,7 +4,7 @@
     {
       "src": "task-manager/package.json",
       "use": "@vercel/static-build",
-      "config": { "outputDirectory": "task-manager/dist/task-manager" }
+      "config": { "outputDirectory": "task-manager/dist/task-manager/browser" }
     },
     {
       "src": "backend/index.js",
