@@ -4,21 +4,21 @@
     {
       "src": "task-manager/package.json",
       "use": "@vercel/static-build",
-      "config": { "outputDirectory": "dist/task-manager/browser" }
+      "config": { "outputDirectory": "task-manager/dist/task-manager" }
     },
     {
       "src": "backend/index.js",
       "use": "@vercel/node"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "backend/index.js"
+      "source": "/api/(.*)",
+      "destination": "/backend/index.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "task-manager/dist/task-manager/browser/$1"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
