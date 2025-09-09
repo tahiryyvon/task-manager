@@ -2,9 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "task-manager",
+      "src": "task-manager/package.json",
       "use": "@vercel/static-build",
-      "config": { "outputDirectory": "dist/task-manager/browser" }
+      "config": {
+        "distDir": "dist/task-manager/browser"
+      }
     },
     {
       "src": "backend/index.js",
